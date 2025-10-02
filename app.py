@@ -6,7 +6,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load model
-model = load_model('trained_lung_cancer_model.h5')
+try:
+    model = load_model('trained_lung_cancer_model.h5', compile=False)
+except:
+    try:
+        model = load_model('trained_lung_cancer_model.h5')
+    except Exception as e:
+        st.error(f"Failed to load model: {e}")
+        st.stop()
 
 # Class labels
 CLASS_NAMES = ['normal', 'adenocarcinoma', 'large_cell_carcinoma', 'squamous_cell_carcinoma']
