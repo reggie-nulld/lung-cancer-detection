@@ -12,7 +12,7 @@ squamous_cell_carcinoma_folder = '/squamous.cell.carcinoma_left.hilum_T1_N2_M0_I
 # Importing necessary libraries
 import warnings
 warnings.filterwarnings('ignore')
-
+                                                                                                  
 import pandas as pd
 import numpy as np
 import seaborn as sns
